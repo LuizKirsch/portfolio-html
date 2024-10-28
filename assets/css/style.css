@@ -2,10 +2,33 @@ body{
     margin: 0 10rem;
 }
 .person{
-    height: 14rem;
+    height: auto;
     width: 14rem;
 }
-.square {
-    aspect-ratio: 1 / 1; /* Define proporção de 1:1, tornando o elemento quadrado */
+.rectangle{
+    /* aspect-ratio: 16 / 4; */
     width: 100%;
+    padding: 1rem;
+}
+.fa-brands{
+    font-size: 4rem;
+}
+.square {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    position: relative;
+}
+
+.button-container {
+    display: none;
+    position: absolute;
+    bottom: 10px; /* Posiciona os botões na parte inferior */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* Garante que os botões fiquem sobre o texto */
+}
+
+.square:hover .button-container {
+    display: flex;
+    gap: 5px; /* Espaço entre os botões */
 }

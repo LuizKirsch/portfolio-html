@@ -40,35 +40,48 @@
             </div>
             <div class="col-8">
                <div class="row">
-                  <div class="col-4">teste 1</div>
-                  <div class="col-4">
-                     <div class="dropdown">
+                  <div class="col-sm-12 col-md-4">@quirsshe</div>
+                  <div class="col-6 col-sm-6 col-md-4">
+                     <div class="dropdown h-100">
                         <button
-                           class="btn btn-secondary dropdown-toggle"
+                           class="btn btn-secondary dropdown-toggle w-100 h-100"
                            type="button"
                            data-bs-toggle="dropdown"
                            aria-expanded="false"
                            >
-                        Dropdown button
+                        Links
                         </button>
-                        <ul class="dropdown-menu">
-                           <li><a class="dropdown-item" href="#">Action</a></li>
-                           <li><a class="dropdown-item" href="#">Another action</a></li>
-                           <li>
-                              <a class="dropdown-item" href="#">Something else here</a>
-                           </li>
+                        <ul class="dropdown-menu w-100">
+                           <li><a class="dropdown-item" target="_blank" href="https://www.linkedin.com/in/luiz-kirsch-177555187/">LinkeDin</a></li>
+                           <li><a class="dropdown-item" target="_blank" href="https://github.com/LuizKirsch">GitHub</a></li>
                         </ul>
                      </div>
                   </div>
-                  <div class="col-4">
-                     <button type="button" class="btn btn-secondary">Secondary</button>
+                  <div class="col-6 col-sm-6 col-md-4">
+                     <a href="https://wa.me/5511995672942?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20seu%20trabalho!" target="_blank" class="btn btn-secondary">Enviar mensagem</a>
                   </div>
                </div>
                <div class="row my-3">
-                  <div class="col-4">teste</div>
-                  <div class="col-4">teste</div>
-                  <div class="col-4">teste</div>
+                  <div class="col-6">3 Projetos</div>
+                  <div class="col-6">5 Skills</div>
                </div>
+               <div class="d-none d-md-none d-lg-flex flex-column">
+                  <div class="row my-3">
+                     <div class="col-12">Luiz Kirsch</div>
+                  </div>
+                  <div class="row my-3">
+                     <div class="col-12">
+                        Sou Luiz, desenvolvedor fullstack com especialização em PHP e
+                        Laravel. Iniciei minha carreira na área de Quality Assurance, onde
+                        trabalhei com automação de testes e adquiri uma visão ampla do
+                        ciclo de desenvolvimento de software. Atualmente, curso Análise e
+                        Desenvolvimento de Sistemas, buscando sempre aprimorar minhas
+                        habilidades e acompanhar as inovações da tecnologia.
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="d-flex d-md-flex d-lg-none flex-column">
                <div class="row my-3">
                   <div class="col-12">Luiz Kirsch</div>
                </div>
@@ -252,63 +265,120 @@
             </div>
          </div>
       </div>
-      
-
-      <div class="container mt-4">
-        <!-- Navegação das abas -->
-        <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+      <div class="container my-4">
+         <!-- Navegação das abas -->
+         <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1" aria-selected="true">Projetos</button>
+               <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1" aria-selected="true">Projetos</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab" aria-controls="tab2" aria-selected="false">Skills</button>
+               <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab" aria-controls="tab2" aria-selected="false">Skills</button>
             </li>
-        </ul>
-    
-        <!-- Conteúdo das abas -->
-        <div class="tab-content" id="myTabContent">
+         </ul>
+         <!-- Conteúdo das abas -->
+         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
-                <div class="row">
-                    <div class="col-4 p-1">
-                        <div class="bg-primary square">teste</div>
-                    </div>
-                    <div class="col-4 p-1">
-                        <div class="bg-primary square">teste</div>
-                    </div>
-                    <div class="col-4 p-1">
-                        <div class="bg-primary square">teste</div>
-                    </div>
-                    <div class="col-4 p-1">
-                        <div class="bg-primary square">teste</div>
-                    </div>
-                    <div class="col-4 p-1">
-                        <div class="bg-primary square">teste</div>
-                    </div>
-                </div>
-                
+               <div class="row">
+                  <div class="col-4 p-1">
+                     <div class="bg-primary square d-flex justify-content-center align-items-center position-relative">
+                        <span>teste</span>
+                        <div class="button-container">
+                           <button class="btn btn-light m-1">Button 1</button>
+                           <button class="btn btn-light m-1">Button 2</button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-4 p-1">
+                     <div class="bg-primary square d-flex justify-content-center align-items-center position-relative">
+                        <span>teste</span>
+                        <div class="button-container">
+                           <button class="btn btn-light m-1">Button 1</button>
+                           <button class="btn btn-light m-1">Button 2</button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-4 p-1">
+                     <div class="bg-primary square d-flex justify-content-center align-items-center position-relative">
+                        <span>teste</span>
+                        <div class="button-container">
+                           <button class="btn btn-light m-1">Button 1</button>
+                           <button class="btn btn-light m-1">Button 2</button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-4 p-1">
+                     <div class="bg-primary square d-flex justify-content-center align-items-center position-relative">
+                        <span>teste</span>
+                        <div class="button-container">
+                           <button class="btn btn-light m-1">Button 1</button>
+                           <button class="btn btn-light m-1">Button 2</button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-4 p-1">
+                     <div class="bg-primary square d-flex justify-content-center align-items-center position-relative">
+                        <span>teste</span>
+                        <div class="button-container">
+                           <button class="btn btn-light m-1">Button 1</button>
+                           <button class="btn btn-light m-1">Button 2</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
             <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
-                <div class="row">
-                    <div class="col-4 p-1">
-                        <div class="bg-success square">teste</div>
-                    </div>
-                    <div class="col-4 p-1">
-                        <div class="bg-success square">teste</div>
-                    </div>
-                    <div class="col-4 p-1">
-                        <div class="bg-success square">teste</div>
-                    </div>
-                    <div class="col-4 p-1">
-                        <div class="bg-success square">teste</div>
-                    </div>
-                    <div class="col-4 p-1">
-                        <div class="bg-success square">teste</div>
-                    </div>
-                </div>
-                
+               <div class="row">
+                  <div class="col-4 p-1">
+                     <div class="bg-success rectangle d-flex justify-content-center align-items-center">
+                        <img src="assets/img/icons/css-3-svgrepo-com.svg" alt="" srcset="">
+                     </div>
+                  </div>
+                  <div class="col-4 p-1">
+                     <div class="bg-success rectangle d-flex justify-content-center align-items-center">
+                        <img src="assets/img/icons/js-svgrepo-com.svg" alt="" srcset="">
+                     </div>
+                  </div>
+                  <div class="col-4 p-1">
+                     <div class="bg-success rectangle d-flex justify-content-center align-items-center">
+                        <img src="assets/img/icons/php-svgrepo-com.svg" alt="" srcset="">
+                     </div>
+                  </div>
+                  <div class="col-4 p-1">
+                     <div class="bg-success rectangle d-flex justify-content-center align-items-center">
+                        <img src="assets/img/icons/laravel-svgrepo-com.svg" alt="" srcset="">
+                     </div>
+                  </div>
+                  <div class="col-4 p-1">
+                     <div class="bg-success rectangle d-flex justify-content-center align-items-center">
+                        <img src="assets/img/icons/mysql-logo-svgrepo-com.svg" alt="" srcset="">
+                     </div>
+                  </div>
+                  <div class="col-4 p-1">
+                     <div class="bg-success rectangle d-flex justify-content-center align-items-center">
+                        <img src="assets/img/icons/cypress-svgrepo-com.svg" alt="" srcset="">
+                     </div>
+                  </div>
+                  <div class="col-4 p-1">
+                     <div class="bg-success rectangle d-flex justify-content-center align-items-center">
+                        <img src="assets/img/icons/java-svgrepo-com.svg" alt="" srcset="">
+                     </div>
+                  </div>
+                  <div class="col-4 p-1">
+                     <div class="bg-success rectangle d-flex justify-content-center align-items-center">
+                        <img src="assets/img/icons/jira-svgrepo-com.svg" alt="" srcset="">
+                     </div>
+                  </div>
+                  <div class="col-4 p-1">
+                     <div class="bg-success rectangle d-flex justify-content-center align-items-center">
+                        <img src="assets/img/icons/git-svgrepo-com.svg" alt="" srcset="">
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
+         </div>
+      </div>
+      <!-- icon fonts icon -->
+      <script src="https://kit.fontawesome.com/5d2b39b908.js" crossorigin="anonymous"></script>
       <!-- modal de stories -->
       <div id="storyModal" class="modal">
          <div class="w-100">
