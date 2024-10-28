@@ -6,18 +6,6 @@ body{
     width: 14rem;
 }
 .square {
-    position: relative;
-    padding-bottom: 100%; 
-    height: 0;            
-}
-
-.square > * {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    aspect-ratio: 1 / 1; /* Define proporção de 1:1, tornando o elemento quadrado */
+    width: 100%;
 }
