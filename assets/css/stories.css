@@ -1,0 +1,371 @@
+* {
+    user-select: none; /* Evita a seleção de texto */
+  }
+  :root{
+      --rose: #f2c0ba;
+      --gray: #f1f1f1;
+      --blue: #0856a2;
+  }
+  .stories-container {
+      display: flex;
+      overflow-y: hidden;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+  }
+  
+  .stories-container::-webkit-scrollbar {
+      display: none;
+  }
+  
+  .story {
+      flex: 0 0 18vw;
+      height: 20vw;
+      border-radius: 50%;
+      margin: 5px;
+      scroll-snap-align: center;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .story-content {
+      width: 20vw;
+      height: 20vw;
+      border-radius: 50%;
+      padding: 1px;
+      background: var(--rose);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid transparent;
+  }
+  .story-border{
+      border: 5px solid white;
+      border-radius: 50%;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+  }
+  .story-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: none;
+      /* border: 4px solid white; */
+  }
+  .story-content-viewed{
+      background: #d8d8d8!important;
+  }
+  
+  /* model */
+  
+  .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      overflow: hidden;
+  }
+  
+  .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+      margin-bottom: 20px;
+  }
+  
+  #caption {
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+  }
+  
+  .progress-container {
+      width: 90%;
+      height: 5px;
+      background: #ddd;
+      /* margin-bottom: 20px; */
+      z-index: 100000;
+      position: fixed;
+      top: 37px;
+      left: 5px;
+  }
+  
+  .progress-bar {
+      width: 0%;
+      height: 100%;
+      background: #f09433;
+      transition: width 5s linear;
+  }
+  
+  .nav-arrow {
+      font-size: 3rem;
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      user-select: none;
+      z-index: 100; /* Ajustado para garantir que as setas fiquem sobre outros elementos */
+      opacity: 0; /* Inicialmente invisível */
+      transition: opacity 0.3s; /* Transição suave para a visibilidade */
+  }
+  
+  .left-arrow {
+      left: 10px;
+  }
+  
+  .right-arrow {
+      right: 10px;
+  }
+  
+  .close-btn {
+      font-size: 2rem;
+      color: #fff;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      user-select: none;
+      z-index: 1010; /* Garante que o botão de fechamento esteja sobre as setas */
+  }
+  
+  .modal.show .nav-arrow {
+      opacity: 0; /* Torna as setas inivisiveis quando a modal é exibida */
+  }
+  .stories-container {
+      display: flex;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+  }
+  
+  .stories-container::-webkit-scrollbar {
+      display: none;
+  }
+  
+  .story {
+      flex: 0 0 19vw;
+      height: 20vw;
+      border-radius: 50%;
+      margin: 5px;
+      scroll-snap-align: center;
+      height: 100%;
+  }
+  
+  .story-images {
+      width: 17vw;
+      height: 17vw;
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+  }
+  
+  .story-img {
+      width: 95%;
+      height: 95%;
+      border-radius: 50%;
+      object-fit: cover;
+      /* border: 3px solid transparent; */
+      position: absolute;
+      /* top: 0; */
+      /* left: 0; */
+      transition: opacity 0.5s ease-in-out;
+      /* margin: 4px; */
+      padding: 3px;
+  }
+  
+  .story-images .story-img:nth-child(2) {
+      opacity: 0;
+  }
+  
+  .story-images .story-img.active {
+      opacity: 1;
+  }
+  
+  .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      overflow: hidden;
+  }
+  
+  .modal-images {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      height: 75vh;
+  }
+  
+  /* .modal-content {
+      max-width: 90%;
+      max-height: 70%;
+  } */
+  
+  #caption {
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+  }
+  
+  .progress-container {
+      width: 90%;
+      height: 5px;
+      background: #a8a8a8;
+      border-radius: 30px;
+  }
+  
+  .progress-bar {
+      width: 0%;
+      height: 100%;
+      background: #ffffff;
+      transition: width 5s linear;
+      border-radius: 30px;
+  }
+  
+  .close-btn {
+      font-size: 2rem;
+      color: #fff;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      user-select: none;
+      z-index: 1010; /* Garante que o botão de fechamento esteja sobre as setas */
+  }
+  
+  .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      z-index: 100000;
+      height: 50%;
+      opacity: 0;
+  }
+  
+  .story-banner{
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+  }
+  .prev-btn {
+      left: 10px;
+  }
+  
+  .next-btn {
+      right: 10px;
+  }
+  .story-title{
+      padding-top: 10px;
+      font-size: 11px;
+      font-weight: 400;
+  }
+  .title-structure{
+      padding-left: 35px;
+  }
+  .story-banner{
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+  }
+  
+  .container-progress {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin: 20px 0;
+      }
+      .progress-item {
+      flex-grow: 1;
+      height: 5px;
+      background-color: #e0e0e0;
+      margin: 0 5px;
+      overflow: hidden;
+      position: relative;
+      }
+      .progress-fill {
+      height: 100%;
+      background-color: var(--rose);
+      width: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      }
+  
+      @media (min-width: 768px) and (max-width: 1200px) {
+          .story-content{
+              padding: 4px;
+          }
+          .story-border{
+              border: 6px solid white;
+          }
+          .story-images {
+              width: 9vw;
+              height: 9vw;
+          }
+          .story-content {
+              padding: 3px;
+          }
+      }
+      @media (min-width: 768px) {
+          .story-images{
+              width: 6vw;
+              height: 6vw;
+          }
+          .story{
+              flex: 0 0 8vw;
+          }
+          .story-content{
+              padding: 4px;
+          }
+          .story-border{
+              border: 6px solid white;
+          }
+          .stories-container{
+              cursor: grab;
+              margin: 0 2rem;
+          }
+          .stories-container.active{
+              cursor: grabbing;
+          }
+          .stories-container {
+              scroll-behavior: smooth; /* Para rolagem suave */
+          }
+          
+          .stories-container.active {
+              transition: scroll 1s ease; /* Adiciona uma transição quando o mouse é solto */
+          }
+           /* .stories-container{
+          scrollbar-width: thin;
+      } */
+      }
