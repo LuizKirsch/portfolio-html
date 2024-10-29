@@ -61,7 +61,8 @@
       /* border: 4px solid white; */
   }
   .story-content-viewed{
-      background: #d8d8d8!important;
+      /* background: #d8d8d8!important; */
+      border: 5px solid #d8d8d8!important;
   }
   
   /* model */
