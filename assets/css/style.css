@@ -9,6 +9,7 @@ body{
     /* aspect-ratio: 16 / 4; */
     width: 100%;
     padding: 1rem;
+    background: #f7f7f7;
 }
 .fa-brands{
     font-size: 4rem;
